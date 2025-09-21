@@ -1,0 +1,48 @@
+--------------------stats--------------------------
+Current Time: 2025-09-16 14:07:43
+DB n: 4294967296
+DB entry size (Bytes): 32
+DB size (GB): 128
+s0 = 2048, s1 = 16384, hintNum = 5632, kappa = 6, throwNum = 2
+Every Local Hint Size 136 KB, in total 748 MB
+Total Replacement Entry Size 0 MB
+Total Cache Size 0 MB
+Total Local Memory 748 MB
+Per query online upload communication cost 384 kb
+Per query online download communication cost 0 kb
+Per query offline communication cost 1664 kb
+Preprocessing Phase took 698832 ms
+End to end amortized time 1108.687 ms
+Average Online Network Latency 6.884649688 ms
+Average Offline Network Latency 27.306708633000003 ms
+Average Online Server Time 11.404939555 ms
+Average Offline Server Time 1064.007546012 ms
+Average Online Client Time 1.137588902 ms
+Average Offline Client Time 1.382085786 ms
+---------------------------------------------------
+
+
+--------------------stats--------------------------
+Current Time: 2025-09-17 02:30:03
+DB n: 134217728
+DB entry size (Bytes): 1024
+DB size (GB): 128
+s0 = 512, s1 = 8192, hintNum = 1472, kappa = 7, throwNum = 3
+Every Local Hint Size 546 KB, in total 784 MB
+Total Replacement Entry Size 8 MB
+Total Cache Size 0 MB
+Total Local Memory 793 MB
+Per query online upload communication cost 224 kb
+Per query online download communication cost 7 kb
+Per query offline communication cost 13684 kb
+Preprocessing Phase took 164765 ms
+End to end amortized time 1259.321 ms
+Average Online Network Latency 2.933575977 ms
+Average Offline Network Latency 135.133737322 ms
+Average Online Server Time 22.606790395 ms
+Average Offline Server Time 1104.871568062 ms
+Average Online Client Time 0.27074030200000004 ms
+Average Offline Client Time 3.169935225 ms
+---------------------------------------------------
+
+

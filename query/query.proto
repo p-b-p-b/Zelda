@@ -1,0 +1,63 @@
+syntax = "proto3";
+
+package query;
+
+option go_package = "example.com/query";
+
+service QueryService {
+    rpc PlaintextQuery (PlaintextQueryMsg)  returns (PlaintextResponse) {}
+    rpc RandomHintQuery (RandomHintQueryMsg) returns (stream RandomHintResponse) {}
+    rpc ReplacementEntryQuery (ReplacementEntryQueryMsg) returns (ReplacementEntryResponse) {}
+    rpc SetParityQuery (SetParityQueryMsg) returns (SetParityQueryResponse) {}
+    rpc HintComputeTimeQuery (HintComputeTimeQueryMsg) returns (HintComputeTimeResponse) {}
+}
+
+message PlaintextQueryMsg {
+    uint32 Index = 1;
+}
+
+message PlaintextResponse {
+    //uint32 Index = 1;
+    repeated uint64 Val = 1;
+}
+
+message RandomHintQueryMsg {
+    uint32 S0 = 1;
+    uint32 S1 = 2;
+    uint32 Num = 3;
+}
+
+message RandomHintResponse {
+    repeated uint32 Row0 = 1;
+    repeated uint32 Row1 = 2;
+    repeated uint64 Parity = 3;
+}
+
+message ReplacementEntryQueryMsg {
+    uint32 S1 = 1;
+}
+
+message ReplacementEntryResponse {
+    repeated uint32 Index = 1;
+    repeated uint64 Parity = 2;
+    uint64 ServerComputeTime = 3;
+}
+
+message SetParityQueryMsg {
+    uint32 SetNum = 1;
+    uint32 SetSize = 2;
+    repeated uint32 Indices = 3;
+}
+
+message SetParityQueryResponse {
+    repeated uint64 Parity = 1;
+    uint64 ServerComputeTime = 2;
+}
+
+message HintComputeTimeQueryMsg {
+    uint32 Dummy = 1;
+}
+
+message HintComputeTimeResponse {
+    uint64 HintComputeTime = 1;
+}
